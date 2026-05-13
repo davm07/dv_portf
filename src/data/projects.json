@@ -1,0 +1,32 @@
+[
+  {
+    "title": "ShrinkLink - Chrome Extension",
+    "description": "Chrome extension for shortening and managing URLs with personalized history tracking. Built using React, Node.js, Express, MongoDB, and Tailwind CSS.",
+    "link": "https://chromewebstore.google.com/detail/shrinklink/dcjmjfkhnclfdangbnhcplllefhgijgd?hl=en-US",
+    "image": "/projects/shrinklink.webp",
+    "tags": ["NEXT", "TAILWIND", "NODE", "REACT", "MONGODB"]
+  },
+  {
+    "title": "Handcrafted Haven - E-commerce example",
+    "description": "Full stack e-commerce platform for artisans to showcase and sell products with role-based accounts and Google authentication. Built with Next.js, PostgreSQL, Tailwind CSS, NextAuth, and Zod.",
+    "link": "https://handcrafted-heaven-phi.vercel.app/",
+    "github": "https://github.com/Koigor97/handcrafted-heaven",
+    "image": "/projects/handcraftedhaven.webp",
+    "tags": ["NEXT", "TAILWIND", "POSTGRES", "REACT"]
+  },
+  {
+    "title": "School Management API - System for managing school operations",
+    "description": "REST API for managing students, teachers, classes, and administrators with Google OAuth authentication and JWT authorization. Built using Node.js, Express, MongoDB, Passport.js, and JWT.",
+    "link": "https://cse341finalproject-e3e4.onrender.com/api-docs/",
+    "image": "/projects/schoolapi.webp",
+    "tags": ["NODEJS", "EXPRESSJS", "MONGODB"]
+  },
+  {
+    "title": "FootieWY - Football app to track stats",
+    "description": "Football data web application featuring leagues, teams, players, search, and favorites using external REST APIs. Built with JavaScript, HTML, CSS, Node.js, and Vite.",
+    "link": "https://footiewy.netlify.app/",
+    "github": "https://github.com/davm07/footieWY",
+    "image": "/projects/footieapp.webp",
+    "tags": ["JAVASCRIPT", "HTML", "CSS", "NODEJS", "VITE"]
+  }
+]

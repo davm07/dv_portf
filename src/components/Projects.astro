@@ -1,0 +1,17 @@
+---
+import projectData from "@data/projects.json";
+---
+
+<div>
+    {
+        projectData.map((project) => (
+            <div class="project-card">
+                <h2>{project.title}</h2>
+                <p>{project.description}</p>
+                <a href={project.link}>Link</a>
+                <a href={project.github}>Github</a>
+                <img src={project.image} alt={project.title} />
+            </div>
+        ))
+    }
+</div>

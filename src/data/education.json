@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Bachelor of Science in Applied Technology",
+    "school": "Brigham Young University – Idaho",
+    "endDate": "Dec 2025",
+    "description": "Full-stack web application development with a major emphasis on backend development.",
+    "location": "Rexburg, Idaho, USA"
+  },
+  {
+    "title": "Associate's degree in Applied Science in Applied Technology",
+    "school": "Brigham Young University – Idaho",
+    "endDate": "Dec 2024",
+    "description": "Full-stack application development using modern technologies such as NodeJS, ReactJS, NextJS, and PostgreSQL.",
+    "location": "Rexburg, Idaho, USA"
+  }
+]
