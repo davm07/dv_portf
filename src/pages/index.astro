@@ -2,13 +2,19 @@
 import Layout from "@layouts/Layout.astro"
 import Hero from "@components/Hero.astro"
 import Projects from "@components/Projects.astro"
+import Container from "@components/Container.astro"
 ---
 
 
 
-<Layout>
-	<main>
-		<Hero />
-		<Projects />
+<Layout
+	title="Diego's Portfolio"
+	description="Welcome to my portfolio! I'm a passionate software developer with a knack for creating innovative solutions."
+>
+	<main class="flex flex-col items-center w-full max-w-3xl p-6 md:p-10  lg:py-16">
+		<Container>
+			<Hero />
+		</Container>
+		<!-- <Projects /> -->
 	</main>
 </Layout>

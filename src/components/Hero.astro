@@ -1,27 +1,35 @@
 ---
 import SocialLink from "./SocialLink.astro";
+import MailIcon from "./icons/Mail.astro";
+import GithubIcon from "./icons/Github.astro";
+import LinkedInIcon from "./icons/LinkedIn.astro";
 ---
 
-<section>
-    <div>
-        <div>
-            <img src="diegovasquez.webp" alt="Diego Vasquez" />
+<section class="flex flex-col gap-6">
+    <div class="flex flex-row items-center gap-6">
+        <div class="relative shrink-0">
+            <div class="absolute inset-0 rounded-full bg-violet-400/30 blur-xl scale-125">
+            </div>
+            <img src="diegovasquez.webp" alt="Diego Vasquez" class="relative rounded-full shadow-2xl size-20 ring-2 ring-violet-400/60 ring-offset-2 ring-offset-gray-950 object-cover"/>
         </div>
         <div>
-            <h1>Hi, I'm <span>Diego</span></h1>
+            <h1 class="text-4xl font-bold mt-6">Hi, I'm <span class="bg-linear-to-r from-blue-400 to-violet-400  bg-clip-text text-transparent">Diego</span></h1>
         </div>
     </div>
-    <p>
-        Junior <strong>Full-Stack Developer</strong> with a solid foundation in web development and experience in problem-solving and customer support. Passionate about developing <strong>scalable applications</strong>, learning new technologies, and creating <strong>user-centered solutions</strong>. Fluent in Spanish and English.
+    <p class="text-pretty text-lg">
+        Junior <strong class="text-blue-400">Full-Stack Developer</strong> with a solid foundation in web development and experience in customer support. Passionate about building <strong class="text-blue-400">scalable applications</strong>, and <strong class="text-blue-400">user-centered solutions</strong>.
     </p>
-    <nav>
+    <nav class="flex flex-wrap gap-4">
         <SocialLink href="mailto:diegovasquezmejia1999@gmail.com">
+            <MailIcon class="size-4"/>
             Contact Me
         </SocialLink>
         <SocialLink href="https://github.com/davm07/">
+            <GithubIcon class="size-4"/>
             GitHub
         </SocialLink>
         <SocialLink href="https://www.linkedin.com/in/diego-vasquez-mejia/">
+            <LinkedInIcon class="size-4"/>
             LinkedIn
         </SocialLink>
     </nav>
