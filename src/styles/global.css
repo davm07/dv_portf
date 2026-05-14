@@ -32,3 +32,7 @@ body {
     scroll-behavior: auto;
   }
 }
+
+.highlight-text {
+  @apply bg-linear-to-r from-blue-400 to-violet-400  bg-clip-text text-transparent;
+}

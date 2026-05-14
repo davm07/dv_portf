@@ -1,17 +1,18 @@
 ---
 import projectData from "@data/projects.json";
+import ProjectItem from "./ProjectItem.astro";
+import SectionTitle from "./SectionTitle.astro";
+import ProjectIcon from "./icons/ProjectIcon.astro";
 ---
 
 <div>
+    <SectionTitle>
+        <ProjectIcon class="size-6 text-blue-400/70"/>
+        Projects
+    </SectionTitle>
     {
         projectData.map((project) => (
-            <div class="project-card">
-                <h2>{project.title}</h2>
-                <p>{project.description}</p>
-                <a href={project.link}>Link</a>
-                <a href={project.github}>Github</a>
-                <img src={project.image} alt={project.title} />
-            </div>
+            <ProjectItem project={project} />
         ))
     }
 </div>
