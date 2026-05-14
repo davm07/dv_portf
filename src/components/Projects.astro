@@ -3,15 +3,86 @@ import projectData from "@data/projects.json";
 import ProjectItem from "./ProjectItem.astro";
 import SectionTitle from "./SectionTitle.astro";
 import ProjectIcon from "./icons/ProjectIcon.astro";
+import Css from "./icons/Css.astro";
+import Express from "./icons/Express.astro";
+import Html from "./icons/Html.astro";
+import Javascript from "./icons/Javascript.astro";
+import MongoDB from "./icons/MongoDB.astro";
+import Next from "./icons/Next.astro";
+import Node from "./icons/Node.astro";
+import Postgres from "./icons/Postgres.astro";
+import React from "./icons/React.astro";
+import Tailwind from "./icons/Tailwind.astro";
+
+const TAGS: Record<string, { name:string, class: string, icon:any}> = {
+    NEXT: {
+        name: "Next.js",
+        class: "bg-black text-white",
+        icon: Next,
+    },
+    CSS: {
+        name: "CSS",
+        class: "bg-blue-600/50 text-white",
+        icon: Css,
+    },
+    EXPRESS: {
+        name: "Express.js",
+        class: "bg-gray-700 text-white",
+        icon: Express,
+    },
+    HTML: {
+        name: "HTML",
+        class: "bg-orange-600/70 text-white",
+        icon: Html,
+    },
+    JAVASCRIPT: {
+        name: "Javascript",
+        class: "bg-yellow-500 text-black",
+        icon: Javascript,
+    },
+    MONGODB: {
+        name: "MongoDB",
+        class: "bg-green-700/80 text-white",
+        icon: MongoDB,
+    },
+    NODE: {
+        name: "Node.js",
+        class: "bg-green-900/80 text-white",
+        icon: Node,
+    },
+    POSTGRES: {
+        name: "Postgres",
+        class: "bg-blue-800/60 text-white",
+        icon: Postgres,
+    },
+    REACT: {
+        name: "React",
+        class: "bg-sky-700/90 text-white",
+        icon: React,
+    },
+    TAILWIND: {
+        name: "Tailwind",
+        class: "bg-[#003159] text-white",
+        icon: Tailwind,
+    }
+}
+
+const PROJECTS = projectData.map((project) => {
+    return {
+        ...project,
+        tags: project.tags.map((tag) => TAGS[tag]),
+    }
+})
 ---
 
-<div>
-    <SectionTitle>
-        <ProjectIcon class="size-6 text-blue-400/70"/>
-        Projects
-    </SectionTitle>
+
+<SectionTitle>
+    <ProjectIcon class="size-7 text-blue-400/70"/>
+    Projects
+</SectionTitle>
+<div class="flex flex-col gap-10 md:gap-16">
     {
-        projectData.map((project) => (
+        PROJECTS.map((project) => (
             <ProjectItem project={project} />
         ))
     }

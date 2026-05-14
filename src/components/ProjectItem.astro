@@ -5,17 +5,35 @@ import ExternalLink from "./icons/ExternalLink.astro";
 import GitHub from "./icons/Github.astro";
 ---
 
-<div>
-    <div>
-        <img src={project.image} alt={project.title} class="w-full h-auto rounded-lg" />
+<div class="flex group flex-col gap-3 md:flex-row md:gap-6 lg:gap-10">
+    <div class="relative w-full md:flex-1 rounded-lg transition-all duration-500 overflow-hidden h-fit border border-transparent lg:group-hover:border lg:group-hover:border-violet-400">
+        <img src={project.image} alt={project.title} class="w-full h-auto object-cover" loading="lazy"/>
     </div>
-    <h3>{project.title}</h3>
-    <p>{project.description}</p>
-    {
-        project.link && <LinkButton href={project.link}><ExternalLink class="size-5"/> Visit</LinkButton>
-    }
-    {
-        project.github && <LinkButton href={project.github}><GitHub class="size-5"/> GitHub</LinkButton>
-    }
-
+    <div class="flex flex-col gap-3 md:flex-1">
+        <h3 class="text-2xl font-bold lg:group-hover:text-violet-400 transition-all duration-300">{project.title}</h3>
+        <ul class="flex flex-wrap flex-row gap-2">
+            {
+                project.tags.map((tag: { class: string; icon: any; name: string }) => (
+                    <li>
+                        <span class={`flex gap-x-1 rounded-full text-xs px-2 py-1 ${tag.class}`}>
+                            <tag.icon class="size-4"/>
+                            {tag.name}
+                        </span>
+                    </li>
+                ))
+            }
+        </ul>
+        <p class="text-pretty">{project.description}</p>
+        {
+            (project.link || project.github) &&
+            <div class="flex flex-row gap-2">
+                {
+                    project.link && <LinkButton href={project.link}><ExternalLink class="size-5"/> Visit</LinkButton>
+                }
+                {
+                    project.github && <LinkButton href={project.github}><GitHub class="size-5"/> GitHub</LinkButton>
+                }
+            </div>
+        }
+    </div>
 </div>
