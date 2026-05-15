@@ -1,0 +1,23 @@
+---
+import ExperienceIcon from "./icons/ExperienceIcon.astro";
+import SectionTitle from "./SectionTitle.astro";
+import experienceData from "../data/experience.json";
+import ExperienceItem from "./ExperienceItem.astro";
+
+---
+
+<SectionTitle>
+    <ExperienceIcon class="size-7 text-blue-400/60"/>
+    Experience
+</SectionTitle>
+
+<ol class="relative border-s border-violet-300 flex gap-10 flex-col ml-2.5">
+    {
+        experienceData.map((experience) => (
+
+            <li class="ms-6">
+                <ExperienceItem experience={experience} />
+            </li>
+        ))
+    }
+</ol>

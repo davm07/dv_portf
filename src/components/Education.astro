@@ -1,0 +1,18 @@
+---
+import EducationIcon from "./icons/EducationIcon.astro";
+import SectionTitle from "./SectionTitle.astro";
+import educationData from "@data/education.json";
+import EducationItem from "./EducationItem.astro";
+---
+
+<SectionTitle>
+    <EducationIcon class="size-7 text-blue-400/60"/>
+    Education
+</SectionTitle>
+<div class="flex flex-col gap-10">
+    {
+        educationData.map((education) => (
+            <EducationItem education={education} />
+        ))
+    }
+</div>

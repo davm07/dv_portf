@@ -2,17 +2,29 @@
   {
     "jobTitle": "Translation service agent",
     "company": "SYKES LTD",
-    "startDate": "Dec 2021",
-    "endDate": "May 2022",
-    "description": "Assisted customers in real time through English–Spanish translation, handling an average of 35 customer interactions per shift.",
+    "startDate": {
+      "label": "Dec 2021",
+      "value": "2021-12"
+    },
+    "endDate": {
+      "label": "May 2022",
+      "value": "2022-05"
+    },
+    "description": "Assisted customers in real time through English–Spanish translation, handling an average of 35 customer interactions per shift. Maintained a 98% customer satisfaction rating over 4 months by focusing on clarity, empathy, and accurate issue resolution.",
     "location": "San Salvador, El Salvador"
   },
   {
     "jobTitle": "Customer service agent",
     "company": "SYKES LTD",
-    "startDate": "Sep 2021",
-    "endDate": "Dec 2021",
-    "description": "Supported customers by handling sensitive personal data and guiding them through insurance plan selection processes.",
+    "startDate": {
+      "label": "Sep 2021",
+      "value": "2021-09"
+    },
+    "endDate": {
+      "label": "Dec 2021",
+      "value": "2021-12"
+    },
+    "description": "Supported customers by handling sensitive personal data and guiding them through insurance plan selection processes. Improved issue resolution efficiency by 5% by applying structured questioning and problem-solving techniques.",
     "location": "San Salvador, El Salvador"
   }
 ]
