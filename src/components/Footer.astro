@@ -1,0 +1,18 @@
+---
+import LinkButton from "./LinkButton.astro";
+import Github from "./icons/Github.astro";
+import Mail from "./icons/Mail.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+---
+
+<footer class="w-full flex flex-row p-6 text-center text-sm items-center justify-between max-w-3xl md:px-10 lg:px-0">
+    <p class="text-pretty text-white/85">
+        &copy; {new Date().getFullYear()} Diego Vasquez
+    </p>
+    <div class="flex flex-row gap-3">
+        <LinkButton href="mailto:diegovasquezmejia1999@gmail.com">
+            <Mail class="size-4"/>
+            Send me an email
+        </LinkButton>
+    </div>
+</footer>
